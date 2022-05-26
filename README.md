@@ -28,3 +28,7 @@ This package provides Conduit interface (see conduit package) for libssh2 FFI
 bindings (see libssh2 package). This allows one to receive data from SSH
 channels lazily, without need to read all channel output to the memory.
 
+This is a fork of the libssh2 Haskell bindings by Ilya
+Portnov, I modified it so it dynamically links to libssh2 (the changes
+are in libssh2/libssh2.cabal). My changes are under the same license
+as his (BSD3).

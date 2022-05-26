@@ -19,6 +19,11 @@ Description:         This package provides FFI bindings for SSH2 client library 
                      <http://libssh2.org/> compiled from source (be sure to pass
                      the 'shared' option to the configure script for 'openssl'
                      to enable the shared libraries).
+                     .
+                     This is a fork of the libssh2 Haskell bindings by Ilya
+                     Portnov, I modified it so it dynamically links to libssh2 (the changes
+                     are in libssh2/libssh2.cabal). My changes are under the same license
+                     as his (BSD3).
 
 Homepage:            https://github.com/portnov/libssh2-hs
 
@@ -26,9 +31,9 @@ License:             BSD3
 
 License-file:        LICENSE
 
-Author:              IlyaPortnov
+Author:              IlyaPortnov, Bernardo
 
-Maintainer:          portnov84@rambler.ru
+-- Maintainer:          portnov84@rambler.ru
 
 -- A copyright notice.
 -- Copyright:
@@ -100,4 +105,4 @@ Executable hs-ssh-client
 
 Source-repository head
   type: git
-  location: https://github.com/portnov/libssh2-hs
+  location: https://github.com/BernardoGomesNegri/libssh2-hs
