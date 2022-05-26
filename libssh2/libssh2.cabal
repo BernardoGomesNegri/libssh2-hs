@@ -70,8 +70,10 @@ Library
                        network >= 2.3 && < 3.2,
                        syb >= 0.3.3, time >= 1.2,
                        bytestring >= 0.9
-
-  Extra-libraries:     "ssh2"
+  
+  -- This way so we only link dynamically libssh
+  ld-options: -Bdynamic -lssh2 -Bstatic
+  --Extra-libraries:     "ssh2"
   pkgconfig-depends:   libssh2 >= 1.2.8
   GHC-Options:         -Wall
   Default-Language: Haskell2010
